@@ -3,10 +3,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Locations from "./pages/Locations";
-import Schedule from "./pages/Schedule";
-import Membership from "./pages/Membership";
 
 const queryClient = new QueryClient();
 
@@ -29,10 +25,7 @@ const App = () => (
         </nav>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/locations" element={<Locations />} />
-          <Route path="/schedule" element={<Schedule />} />
-          <Route path="/membership" element={<Membership />} />
+          {/* Andre ruter vil bli lagt til her senere */}
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
