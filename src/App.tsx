@@ -7,6 +7,8 @@ import About from "./pages/About";
 import Locations from "./pages/Locations";
 import Schedule from "./pages/Schedule";
 import Membership from "./pages/Membership";
+import GroupClasses from "./pages/GroupClasses";
+import PersonalTraining from "./pages/PersonalTraining";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
           <Route path="/locations" element={<Locations />} />
           <Route path="/schedule" element={<Schedule />} />
           <Route path="/membership" element={<Membership />} />
+          <Route path="/group-classes" element={<GroupClasses />} />
+          <Route path="/personal-training" element={<PersonalTraining />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
