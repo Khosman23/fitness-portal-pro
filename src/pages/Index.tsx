@@ -26,12 +26,12 @@ const Index = () => {
             <CarouselContent>
               <CarouselItem>
                 <div className="p-1">
-                  <img src="/gym-image-1.jpg" alt="Moderne treningssenter med store vinduer" className="w-full h-[400px] object-cover rounded-lg" />
+                  <img src="/gym-image-1.jpg" alt="Moderne treningssenter med store vinduer og variert utstyr" className="w-full h-[400px] object-cover rounded-lg" />
                 </div>
               </CarouselItem>
               <CarouselItem>
                 <div className="p-1">
-                  <img src="/gym-image-2.jpg" alt="Treningssenter med variert utstyr" className="w-full h-[400px] object-cover rounded-lg" />
+                  <img src="/gym-image-2.jpg" alt="Lyst treningssenter med høyt tak og moderne tredemøller" className="w-full h-[400px] object-cover rounded-lg" />
                 </div>
               </CarouselItem>
             </CarouselContent>
