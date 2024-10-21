@@ -24,16 +24,17 @@ const Index = () => {
         <div className="container mx-auto">
           <Carousel className="w-full max-w-4xl mx-auto">
             <CarouselContent>
-              <CarouselItem>
-                <div className="p-1">
-                  <img src="/gym-image-1.jpg" alt="Moderne treningssenter med store vinduer og variert utstyr" className="w-full h-[400px] object-cover rounded-lg mx-auto" />
-                </div>
-              </CarouselItem>
-              <CarouselItem>
-                <div className="p-1">
-                  <img src="/gym-image-2.jpg" alt="Lyst treningssenter med høyt tak og moderne tredemøller" className="w-full h-[400px] object-cover rounded-lg mx-auto" />
-                </div>
-              </CarouselItem>
+              {[1, 2, 3].map((_, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        <span className="text-4xl font-semibold">{`Bilde ${index + 1}`}</span>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
