@@ -9,18 +9,48 @@ const HamburgerMenu = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className="md:hidden">
+    <div className="md:hidden relative">
       <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
         {isOpen ? <X /> : <Menu />}
       </Button>
       {isOpen && (
-        <div className="absolute top-16 right-0 w-full bg-white shadow-md">
-          <nav className="flex flex-col p-4">
-            <Link to="/" className="py-2" onClick={toggleMenu}>Hjem</Link>
-            <Link to="/about" className="py-2" onClick={toggleMenu}>Om Oss</Link>
-            <Link to="/locations" className="py-2" onClick={toggleMenu}>Lokasjoner</Link>
-            <Link to="/schedule" className="py-2" onClick={toggleMenu}>Timeplan</Link>
-            <Link to="/membership" className="py-2" onClick={toggleMenu}>Medlemskap</Link>
+        <div className="absolute top-full right-0 w-48 bg-gray-800 shadow-lg rounded-lg mt-2">
+          <nav className="flex flex-col py-2">
+            <Link 
+              to="/" 
+              className="px-4 py-2 text-white hover:bg-gray-700 transition-colors" 
+              onClick={toggleMenu}
+            >
+              Hjem
+            </Link>
+            <Link 
+              to="/about" 
+              className="px-4 py-2 text-white hover:bg-gray-700 transition-colors" 
+              onClick={toggleMenu}
+            >
+              Om Oss
+            </Link>
+            <Link 
+              to="/locations" 
+              className="px-4 py-2 text-white hover:bg-gray-700 transition-colors" 
+              onClick={toggleMenu}
+            >
+              Lokasjoner
+            </Link>
+            <Link 
+              to="/schedule" 
+              className="px-4 py-2 text-white hover:bg-gray-700 transition-colors" 
+              onClick={toggleMenu}
+            >
+              Timeplan
+            </Link>
+            <Link 
+              to="/membership" 
+              className="px-4 py-2 text-white hover:bg-gray-700 transition-colors" 
+              onClick={toggleMenu}
+            >
+              Medlemskap
+            </Link>
           </nav>
         </div>
       )}
