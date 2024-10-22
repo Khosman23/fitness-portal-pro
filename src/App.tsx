@@ -21,7 +21,7 @@ const App = () => (
         <header className="bg-gray-800 text-white p-4">
           <div className="container mx-auto flex justify-between items-center">
             <Link to="/" className="text-xl font-bold">FitLife</Link>
-            <nav className="hidden lg:flex space-x-4">
+            <nav className="hidden md:flex space-x-4">
               <Link to="/" className="hover:text-gray-300">Hjem</Link>
               <Link to="/about" className="hover:text-gray-300">Om Oss</Link>
               <Link to="/locations" className="hover:text-gray-300">Lokasjoner</Link>

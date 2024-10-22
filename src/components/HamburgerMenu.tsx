@@ -9,7 +9,7 @@ const HamburgerMenu = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <div className="lg:hidden">
+    <div className="md:hidden">
       <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
         {isOpen ? <X /> : <Menu />}
       </Button>
