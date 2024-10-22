@@ -9,10 +9,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-20">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-4">Velkommen til FitLife Treningssenter</h1>
-          <p className="text-xl mb-8">Din partner for en sunnere livsstil</p>
+      <section className="bg-blue-600 text-white py-12 md:py-20">
+        <div className="container mx-auto text-center px-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Velkommen til FitLife Treningssenter</h1>
+          <p className="text-lg md:text-xl mb-8">Din partner for en sunnere livsstil</p>
           <Link to="/membership">
             <Button size="lg">Bli medlem nå</Button>
           </Link>
@@ -20,19 +20,17 @@ const Index = () => {
       </section>
 
       {/* Image Carousel */}
-      <section className="py-16">
-        <div className="container mx-auto">
-          <Carousel className="w-full max-w-4xl mx-auto">
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
             <CarouselContent>
               {[1, 2, 3].map((_, index) => (
                 <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-4xl font-semibold">{`Bilde ${index + 1}`}</span>
-                      </CardContent>
-                    </Card>
-                  </div>
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <span className="text-2xl md:text-4xl font-semibold">{`Bilde ${index + 1}`}</span>
+                    </CardContent>
+                  </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -43,14 +41,14 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Våre Tjenester</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link to="/group-classes">
-              <Card>
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Våre Tjenester</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <Link to="/group-classes" className="block">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center">
+                  <CardTitle className="flex items-center text-lg md:text-xl">
                     <DumbbellIcon className="mr-2" /> Gruppetimer
                   </CardTitle>
                 </CardHeader>
@@ -61,10 +59,10 @@ const Index = () => {
                 </CardContent>
               </Card>
             </Link>
-            <Link to="/personal-training">
-              <Card>
+            <Link to="/personal-training" className="block">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center">
+                  <CardTitle className="flex items-center text-lg md:text-xl">
                     <UsersIcon className="mr-2" /> Personlig Trening
                   </CardTitle>
                 </CardHeader>
@@ -75,10 +73,10 @@ const Index = () => {
                 </CardContent>
               </Card>
             </Link>
-            <Link to="/membership">
-              <Card>
+            <Link to="/membership" className="block">
+              <Card className="h-full">
                 <CardHeader>
-                  <CardTitle className="flex items-center">
+                  <CardTitle className="flex items-center text-lg md:text-xl">
                     <HeartPulseIcon className="mr-2" /> Medlemskap
                   </CardTitle>
                 </CardHeader>
